@@ -1,63 +1,128 @@
 # GSL Engine: Set XL Performance Portfolio
-**Hyper-Scale Deterministic Solver for CVRP (1,000 - 10,000 Nodes)**
 
-## Overview
-GSL Engine is a proprietary, high-performance solver specifically engineered for **Extreme-Scale** Capacitated Vehicle Routing Problems (CVRP). It utilizes a **Deterministic Structured Framework** to ensure 100% reproducible, stable, and **Real-time** solutions, even when processing instances exceeding 10,000 nodes on mobile hardware.
+**Deterministic CVRP Routing Framework for Hyper-Scale Benchmarks (1,000–10,000+ Nodes)**
 
 ---
 
-## 📊 Benchmark Validation (Set XL)
-Evaluated against all 100 instances of CVRPLIB Set XL (Hyper-scale). This benchmark compares GSL Engine's deterministic efficiency against standard heuristic baselines: **Clarke-Wright (CW)** and **Large Neighborhood Search (LNS - 300 Iterations)**.
+# Overview
 
-### Performance Summary
-* **Instances:** 100 / 100 (Full Coverage)
-* **Feasibility:** 100% Guaranteed Feasible Routes (Verified via CVRPLib Checker)
-* **Win Rate vs LNS (300 Iter):** 82% (GSL demonstrates superior scalability as stochastic methods struggle with search space explosion at this scale)
-* **Hardware:** Verified on Mobile Snapdragon Architecture (via Pydroid 3)
-* **Max Scale:** Successfully resolved 10,001 nodes (`XL-n10001-k1570`) within a single-pass deterministic run.
+GSL Engine is a proprietary deterministic routing framework engineered for large-scale Capacitated Vehicle Routing Problems (CVRP). The framework emphasizes reproducible routing behavior, deterministic feasibility validation, and scalable execution under constrained mobile-edge environments.
+
+This repository documents benchmark evaluations conducted on the CVRPLIB Set XL benchmark family.
 
 ---
 
-## 📂 Repository Structure
+# 📊 Benchmark Evaluation (Set XL)
 
-All detailed benchmark results, including execution times, gap percentages, and head-to-head comparisons, are stored in CSV format for industrial analysis:
+The framework was evaluated across all 100 instances of the CVRPLIB Set XL benchmark suite.
 
-* 📦 **[Solution Files Archive](./GSL_SetXL_Verified_Solutions.zip)**: A compressed archive containing all verified `.sol` output files for the XL suite.
-* 📁 **[Benchmarks](./Benchmarks)**: 
-  * 📊 [`Cw_setxl_benchmark_result.csv`](./Benchmarks/Cw_setxl_benchmark_result.csv) (GSL vs. Clarke-Wright)
-  * 📊 [`Lns_setxl_benchmark_result.csv`](./Benchmarks/Lns_setxl_benchmark_result.csv) (GSL vs. LNS 300-Iter)
-  * 📝 [`Methodology.md`](./Benchmarks/Methodology.md) (Hyper-scale environment and constraints)
+Comparative experiments were conducted against commonly used heuristic baselines:
 
----
-
-## 🔍 Operational Characteristics
-
-### **Core Strengths**
-* **Deterministic Scalability:** Engineered to maintain logic consistency from 1,000 to 10,000+ nodes. The same input consistently yields the same output, eliminating the risks associated with stochastic variance.
-* **Mobile-Native Optimization:** High-fidelity routing achieved on ARM architecture, proving the engine's efficiency in resource-constrained or edge-computing scenarios.
-* **Operational Integrity:** Prioritizes strict adherence to vehicle capacity (K) and demand constraints, ensuring every solution is "Deployment-Ready."
+- Clarke-Wright Savings (CW)
+- Large Neighborhood Search (LNS – 300 Iterations)
 
 ---
 
-## GSL-Solver Platform
+## Evaluation Summary
 
-**The Enterprise Route Optimization Portal**
-Access the production-ready deterministic engine here:  
-[**https://gsl-solver.com**](https://gsl-solver.com)
+* **Benchmark Coverage:** 100 / 100 Instances
+* **Observed Feasibility:** All reported solutions satisfied CVRP feasibility constraints under the tested configuration
+* **Observed Win Rate vs LNS (300 Iterations):** 82%
+* **Execution Environment:** Mobile Snapdragon Architecture via Python/Pydroid 3
+* **Largest Evaluated Instance:** `XL-n10001-k1570`
 
----
-
-## Professional Contact
-
-**Independent Researcher:** Chonmapoohm Thamsuwan (CTSuwan)  
-**Email:** [ctsuwan@proton.me](mailto:ctsuwan@proton.me)  
+> **Note:**  
+> Comparative results reflect the execution settings and runtime constraints documented in this repository and should not be interpreted as universal solver rankings.
 
 ---
 
-## Services & Collaboration
+# 📂 Repository Structure
 
-Open to professional engagement in the following areas:
-- **Logistics-as-a-Service (LaaS):** Real-time route optimization for hyper-scale enterprise fleets.
-- **Custom Algorithmic Development:** Tailored solutions for complex supply chain constraints.
-- **Large-Scale Network Audit:** Stress-testing and optimization of massive distribution networks.
-- 
+Detailed benchmark data, execution logs, gap measurements, and comparative outputs are provided in CSV format for transparency and reproducibility.
+
+## Included Resources
+
+* 📦 **[Solution Files Archive](./GSL_SetXL_Verified_Solutions.zip)**  
+  Archive containing verified `.sol` routing outputs for the Set XL benchmark suite.
+
+* 📁 **[Benchmarks](./Benchmarks)**
+
+  * 📊 [`Cw_setxl_benchmark_result.csv`](./Benchmarks/Cw_setxl_benchmark_result.csv)  
+    Comparative evaluation against Clarke-Wright Savings
+
+  * 📊 [`Lns_setxl_benchmark_result.csv`](./Benchmarks/Lns_setxl_benchmark_result.csv)  
+    Comparative evaluation against LNS (300 Iterations)
+
+  * 📝 [`Methodology.md`](./Benchmarks/Methodology.md)  
+    Benchmark execution conditions and evaluation methodology
+
+---
+
+# 🔬 Research Focus
+
+This repository explores:
+
+- deterministic hyper-scale CVRP execution
+- reproducible routing behavior
+- large-scale mobile-edge optimization experiments
+- feasibility-oriented routing systems
+- constrained-runtime routing evaluation
+- scalability behavior under massive search spaces
+
+---
+
+# ⚙️ Execution Environment
+
+* **Platform:** Android (Mobile Edge)
+* **Runtime:** Python via Pydroid 3
+* **CPU Architecture:** Snapdragon (ARM-based)
+* **Execution Style:** Deterministic routing execution
+* **Constraint Handling:** Deterministic feasibility validation
+
+---
+
+# 🔍 Operational Characteristics
+
+## Observed Framework Characteristics
+
+- deterministic routing reproducibility
+- stable execution behavior across scaling ranges
+- mobile-native execution capability
+- feasibility-oriented route construction
+- large-scale routing under constrained hardware environments
+
+> **Technical Note:**  
+> This repository focuses on deterministic execution behavior and feasibility-oriented routing evaluation under constrained mobile-edge conditions. Reported benchmark outcomes should be interpreted within the documented execution configuration.
+
+---
+
+# GSL-Solver Platform
+
+## Deterministic Routing Platform
+
+Access the routing platform here:
+
+🔗 [https://gsl-solver.com](https://gsl-solver.com)
+
+---
+
+# Professional Contact
+
+**Independent Researcher:**  
+Chonmapoohm Thamsuwan (CTSuwan)
+
+📧 [ctsuwan@proton.me](mailto:ctsuwan@proton.me)
+
+---
+
+# Services & Collaboration
+
+Open to collaboration and professional engagement in areas including:
+
+- Logistics-as-a-Service (LaaS)
+- Deterministic routing systems
+- Hyper-scale CVRP experimentation
+- Constraint-based logistics optimization
+- Mobile-edge optimization research
+- Large-scale routing stress testing
+- Research and industrial collaboration
