@@ -27,7 +27,7 @@ Comparative experiments were conducted against commonly used heuristic baselines
 
 * **Benchmark Coverage:** 100 / 100 Instances
 * **Observed Feasibility:** All reported solutions satisfied CVRP feasibility constraints under the tested configuration
-* **Observed Win Rate vs LNS (300 Iterations):** 82%
+* **Observed Win Rate vs LNS (300 Iterations):** 66%
 * **Execution Environment:** Mobile Snapdragon Architecture via Python/Pydroid 3
 * **Largest Evaluated Instance:** `XL-n10001-k1570`
 
